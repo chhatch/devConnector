@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "dev": "env-cmd --file ./dev.env nodemon ./server.js"
   },
   "author": "",
   "license": "ISC",
