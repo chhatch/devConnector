@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "env-cmd --file ./dev.env nodemon ./server.js"
+    "server": "env-cmd --file ./dev.env nodemon ./server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +22,9 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
+    "create-react-app": "^3.3.0",
     "env-cmd": "^10.0.1",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.1",
+    "npx": "^10.2.0"
   }
 }
